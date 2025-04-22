@@ -1,6 +1,8 @@
+total_pedido = 0
+
+print("Bem vindo a loja de gelados do Gabriel Fontoura")
+
 while True:
-    total_pedido = 0
-    print("Bem vindo a loja de gelados do Gabriel Fontoura")
     print("-" * 20, "Cardápio", "-" *21 )
     print("-" * 51 )
     print("---|  Tamanho  |  Cupuaçu (CP)  |  Açaí (AC)   |---") 
@@ -39,8 +41,8 @@ while True:
     print(f"\nVocê pediu um {sabor_pedido} tamanho {tamanho.upper()}: R$ {valor:.2f}")
     print(f"Total parcial: R$ {total_pedido:.2f}")
 
-    continuar = input("Deseja pedir mais alguma coisa? (s/n): ").strip().lower()
+    continuar = input("Deseja pedir mais alguma coisa? (S/N): ").strip().lower()
     if continuar != "s":
+        print(f"O valor total a ser pago: R$ {total_pedido:.2f}")
         break
 
-    print(f"\nTotal final do pedido: R$ {total_pedido:.2f}")

@@ -56,6 +56,7 @@ def escolha_serviço():
                     continue
 
         while True:
+            try:
                 opcao_adicional = int(input("Deseja adicionar algum serviço?\n1 - Encadernação Simples - R$ 15.00\n2 - Encadernação Capa Dura  - R$ 40.00\n0 - Não desejo mais nada\n"))
                 if opcao_adicional == 1:
                     adicional = 15
@@ -67,8 +68,10 @@ def escolha_serviço():
                     adicional = 0
                     break
                 else:
-                    print("Opção inválida. Por favor, tente novamente.")
+                    print("Opção inválida. Por favor, tente novamente.\n")
                     continue
+            except:
+                print("Digite apenas números (0, 1 ou 2).\n")
 
         total_sem_desconto = valor_un * num_pag + adicional
         total_com_desconto = total_sem_desconto * (1 - desconto)

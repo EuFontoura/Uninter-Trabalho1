@@ -5,3 +5,8 @@ opcao = input("Escolha a opção desejada:\n1 - Cadastrar Livro\n2 - Consultar L
 
 lista_livro = []
 id_global = 0
+
+def cadastrar_livro(id):
+    nome = input("Por favor entre com o nome do livro: ")
+    autor = input("Por favor entre como nome do autor: ")
+    editora = input("Por favor entre com a editora do livro: ")

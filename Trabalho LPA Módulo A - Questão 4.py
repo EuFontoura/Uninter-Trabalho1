@@ -5,7 +5,8 @@ print("-" * 15, "MENU PRINCIPAL", "-" * 19)
 lista_livro = []
 id_global = 0
 
-
+# Função de cadastrar livro
+# Pergunta nome, autor e editora, e adiciona à lista
 def cadastrar_livro(id):
     global lista_livro
     print("-" * 50)
@@ -24,6 +25,7 @@ def cadastrar_livro(id):
     lista_livro.append(livro)
     print(f"-" * 50)
 
+# Funçao de consultar livro
 def consultar_livro(): 
         while True:
             print("-" * 50)
@@ -37,6 +39,7 @@ def consultar_livro():
             ))
             
             if consulta == 1:
+                # formatação da biblioteca (o padrão se repete para cada consulta)
                 for livro in lista_livro:
                     print(f"\nID: {livro['id']}")
                     print(f"Nome: {livro['nome']}")
@@ -76,6 +79,17 @@ def consultar_livro():
             else:
                 print("Opção inválida.\n")
 
+def remover_livro():
+    while True:
+        id_remover = int(input("Digite o ID do livro que deseja remover: "))
+        for livro in lista_livro:
+            if livro['id'] == id_remover:
+                lista_livro.remove(livro)
+                print(f"Livro removido com sucesso!\n")
+                return
+        print("ID inválido. Tente novamente.")
+
+# chamando as funções
 while True: 
     try: 
         opcao = int(input("Escolha a opção desejada:\n1 - Cadastrar Livro\n2 - Consultar Livro(s)\n3 - Remover Livro\n4 - Sair\n"))
@@ -86,6 +100,9 @@ while True:
             
         elif opcao == 2:
             consultar_livro()
+
+        elif opcao == 3: 
+            remover_livro()
 
         elif opcao == 4:
             break

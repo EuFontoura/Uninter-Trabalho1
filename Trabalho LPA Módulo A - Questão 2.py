@@ -62,4 +62,3 @@ while True:
     if continuar != "s":
         print(f"\nO valor total a ser pago: R$ {total_pedido:.2f}")
         break
-

@@ -1,4 +1,3 @@
-
 print("Bem vindo a Copiadora do Gabriel Fontoura")
 
 # Função para o tipo de serviço

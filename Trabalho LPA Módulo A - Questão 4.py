@@ -6,8 +6,14 @@ lista_livro = []
 id_global = 0
 
 # Função de cadastrar livro
-# Pergunta nome, autor e editora, e adiciona à lista
 def cadastrar_livro(id):
+    """Cadastra um novo livro na lista livro
+
+    Args:
+        id (int): Identificador único do livro, gerado automáticamente sempre que a opção de "cadastrar livro" é selecionada, com base na variável global id_global
+
+        A função solicita ao usuário o nome, autor e editora do livro, cria um dicionário com as informações e adiciona na lista_livro.
+    """
     global lista_livro
     print("-" * 50)
     print("-" * 13, "MENU CADASTRAR LIVRO", "-" * 15)
